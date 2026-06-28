@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MERX / ANDVISHOP - Tienda Premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo" onclick="window.location.reload()">
+        <span class="marca-andvi">ANDVISHOP</span> / <span class="marca-merx">MERX</span>
+      </div>
+      <div class="search-wrap">
+        <i class="ri-search-line search-icon"></i>
+        <input type="text" id="search" placeholder="Buscar joyas, ropa, uso formal, casual...">
+      </div>
+      <button class="cart-trigger" id="cart-trigger">
+        <i class="ri-shopping-bag-line"></i> Mi Carrito (<span id="cart-count">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <nav class="top-nav-bar">
+    <div class="nav-container" id="filters">
+      <button class="nav-item active" data-cat="todos">
+        <i class="ri-grid-fill"></i> Todos
+      </button>
+      <button class="nav-item btn-oferta-top" data-cat="ofertas">
+        <i class="ri-fire-fill"></i> Ofertas
+      </button>
+      
+      <div class="nav-dropdown">
+        <button class="nav-item dropdown-trigger"><i class="ri-refund-2-line"></i> Línea de Productos <i class="ri-arrow-down-s-line arrow"></i></button>
+        <div class="dropdown-menu-content">
+          <button class="filter-chip" data-cat="Joyas">Joyas de Lujo</button>
+          <button class="filter-chip" data-cat="Ropa">Prendas y Ropa</button>
+        </div>
+      </div>
+
+      <div class="nav-dropdown">
+        <button class="nav-item dropdown-trigger"><i class="ri-user-heart-line"></i> Público Colección <i class="ri-arrow-down-s-line arrow"></i></button>
+        <div class="dropdown-menu-content">
+          <button class="filter-chip" data-cat="mujer">Damas</button>
+          <button class="filter-chip" data-cat="hombre">Caballeros</button>
+          <button class="filter-chip" data-cat="nino">Niños y Niñas</button>
+        </div>
+      </div>
+
+      <div class="nav-dropdown">
+        <button class="nav-item dropdown-trigger"><i class="ri-shirt-line"></i> Estilo de Uso <i class="ri-arrow-down-s-line arrow"></i></button>
+        <div class="dropdown-menu-content">
+          <button class="filter-chip" data-cat="formal">Etiqueta & Formal</button>
+          <button class="filter-chip" data-cat="casual">Uso Urbano & Casual</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="carousel-container">
+    <div class="carousel-slide active">
+      <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1400" class="carousel-img" alt="Alta Joyería">
+      <div class="carousel-overlay"></div>
+      <div class="carousel-text">
+        <span class="carousel-tag">ALTA JOYERÍA</span>
+        <h2>Destellos de Elegancia Eterna</h2>
+        <p>Explora piezas de oro de 18k y gemas preciosas seleccionadas para perdurar en tus momentos más memorables.</p>
+      </div>
+    </div>
+    <div class="carousel-slide">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1400" class="carousel-img" alt="Colección Ropa Casual">
+      <div class="carousel-overlay"></div>
+      <div class="carousel-text">
+        <span class="carousel-tag">NUEVA TEMPORADA</span>
+        <h2>Moda Casual con Carácter</h2>
+        <p>Prendas versátiles que definen tu estilo diario sin comprometer la comodidad. Renueva tu guardarropa hoy.</p>
+      </div>
+    </div>
+    <div class="carousel-slide">
+      <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1400" class="carousel-img" alt="Trajes Formales">
+      <div class="carousel-overlay"></div>
+      <div class="carousel-text">
+        <span class="carousel-tag">CORTE ITALIANO</span>
+        <h2>Colección Formal Ejecutiva</h2>
+        <p>Sacos, ternos Slim Fit y vestidos exclusivos diseñados con líneas impecables para eventos corporativos y de gala.</p>
+      </div>
+    </div>
+    <div class="carousel-slide">
+      <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1400" class="carousel-img" alt="Plata Fina 925">
+      <div class="carousel-overlay"></div>
+      <div class="carousel-text">
+        <span class="carousel-tag">PLATA LEGÍTIMA</span>
+        <h2>Minimalismo Brillante</h2>
+        <p>Accesorios de Plata de Ley 925 hipoalergénica. Detalles sutiles creados para resaltar tu belleza natural de forma diaria.</p>
+      </div>
+    </div>
+    <div class="carousel-slide">
+      <img src="https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?q=80&w=1400" class="carousel-img" alt="Colección Infantil">
+      <div class="carousel-overlay"></div>
+      <div class="carousel-text">
+        <span class="carousel-tag">LÍNEA INFANTIL</span>
+        <h2>Moda y Confort para Niños</h2>
+        <p>Casacas denim de alta resistencia y vestidos confeccionados con tejidos extra suaves para proteger las pieles delicadas.</p>
+      </div>
+    </div>
+
+    <div class="carousel-dots">
+      <button class="carousel-dot active"></button>
+      <button class="carousel-dot"></button>
+      <button class="carousel-dot"></button>
+      <button class="carousel-dot"></button>
+      <button class="carousel-dot"></button>
+    </div>
+  </div>
+
+  <main class="store-wrapper">
+    <div class="section-title-alt">
+      <h2>Catálogo de Productos</h2>
+      <span>• Selección Exclusiva de Joyas y Ropa</span>
+    </div>
+    
+    <div class="empty-state" id="empty-state">
+      <div class="icon">🔍</div>
+      <h3>No encontramos resultados</h3>
+      <p>Intenta buscando por marca, uso (formal/casual) o cambiando los filtros del menú.</p>
+    </div>
+
+    <div class="main-grid" id="products-grid"></div>
+  </main>
+
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeProductModal()">✕</button>
+      <div class="modal-layout">
+        <div class="modal-img-wrap">
+          <img id="modal-img" src="" alt="">
+        </div>
+        <div class="modal-info">
+          <span class="card-cat" id="modal-cat"></span>
+          <h2 id="modal-name"></h2>
+          <div id="modal-desc-block" style="margin-bottom:1.5rem;"></div>
+          <div class="modal-footer">
+            <div class="price" id="modal-price"></div>
+            <div id="modal-action-block"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>Mi Carrito</h2>
+      <button class="cart-close" id="cart-close">✕</button>
+    </div>
+    
+    <div class="cart-items" id="cart-items-container"></div>
+    
+    <div class="cart-footer">
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">S/ 0.00</span>
+      </div>
+      <div class="summary-row">
+        <span>Envío Asegurado</span>
+        <span style="color:#22c55e; font-weight:600;">Gratis</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total</span>
+        <span id="cart-total">S/ 0.00</span>
+      </div>
+      
+      <div id="checkout-form-container" style="margin-top: 1.2rem; padding: 1.2rem 1rem; border-top: 2px dashed #cbd5e1; background: #fafafa; border-radius: 10px; display: none; text-align: left;">
+        <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem; color: #7209b7; display: flex; align-items: center; gap: 6px;">
+          <i class="ri-store-2-line"></i> Datos para Recojo en Tienda
+        </h3>
+        
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div>
+              <label style="font-size: 0.75rem; font-weight: 600; color: #6b7280; display:block; margin-bottom: 3px;">Nombre *</label>
+              <input type="text" id="cust-name" placeholder="Ej: Juan" style="width:100%; padding: 0.55rem; border-radius: 6px; border: 1px solid #cbd5e1; outline: none; font-size: 0.85rem;">
+            </div>
+            <div>
+              <label style="font-size: 0.75rem; font-weight: 600; color: #6b7280; display:block; margin-bottom: 3px;">Apellidos *</label>
+              <input type="text" id="cust-lastname" placeholder="Ej: Pérez" style="width:100%; padding: 0.55rem; border-radius: 6px; border: 1px solid #cbd5e1; outline: none; font-size: 0.85rem;">
+            </div>
+          </div>
+          
+          <div>
+            <label style="font-size: 0.75rem; font-weight: 600; color: #6b7280; display:block; margin-bottom: 3px;">Teléfono WhatsApp *</label>
+            <input type="tel" id="cust-phone" maxlength="9" placeholder="9XXXXXXXX" style="width:100%; padding: 0.55rem; border-radius: 6px; border: 1px solid #cbd5e1; outline: none; font-size: 0.85rem;">
+          </div>
+
+          <div>
+            <label style="font-size: 0.75rem; font-weight: 600; color: #6b7280; display:block; margin-bottom: 3px;">Correo Electrónico *</label>
+            <input type="email" id="cust-email" placeholder="juan@correo.com" style="width:100%; padding: 0.55rem; border-radius: 6px; border: 1px solid #cbd5e1; outline: none; font-size: 0.85rem;">
+          </div>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div>
+              <label style="font-size: 0.75rem; font-weight: 600; color: #6b7280; display:block; margin-bottom: 3px;">Fecha Recojo *</label>
+              <input type="date" id="cust-pickup-date" style="width:100%; padding: 0.5rem; border-radius: 6px; border: 1px solid #cbd5e1; outline: none; font-size: 0.85rem; background: white;">
+            </div>
+            <div>
+              <label style="font-size: 0.75rem; font-weight: 600; color: #6b7280; display:block; margin-bottom: 3px;">Horario Recojo *</label>
+              <select id="cust-pickup-time" style="width:100%; padding: 0.53rem; border-radius: 6px; border: 1px solid #cbd5e1; outline: none; font-size: 0.85rem; background: white; cursor: pointer;">
+                <option value="">Seleccionar...</option>
+                <option value="Mañana (8am a 12pm)">Mañana (8am a 12pm)</option>
+                <option value="Tarde (12pm a 4pm)">Tarde (12pm a 4pm)</option>
+                <option value="Noche (4pm a 10pm)">Noche (4pm a 10pm)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="checkout-btn" id="checkout-btn">llenar datos de compra</button>
+    </div>
+  </div>
+  
+  <div id="toast">Producto añadido al carrito</div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 MERX / ANDVISHOP - Todos los derechos reservados.</p>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
